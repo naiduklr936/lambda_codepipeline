@@ -11,12 +11,4 @@ Resources:
       Timeout: 60
       # account id added for testing and role will be removed after testing completed
       Role: arn:aws:iam::228327738462:role/MyLambdaRole
-      Events:
-        getAzsAPI:
-          Type: API
-          Properties:
-            Path: /getzs
-            Method: get
-      Environment:
-        Variables:
-          REGION: us-east-1
+      

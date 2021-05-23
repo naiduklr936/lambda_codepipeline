@@ -1,10 +1,10 @@
 version: 0.1
 phases:
-  install:
+  build:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket my-demo-test-bucket-us-east-1 --output-template-file outputSamTemplate.yaml
-
 artifacts:
   files:
-    - '**/*'
-  name: builds/$CODEBUILD_BUILD_NUMBER/my-demo-artifacts
+    - outputSamTemplate.yaml
+  name: outputSamTemplate.yaml
+  discard-paths: yes
